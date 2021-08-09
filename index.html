@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CookieConsent</title>
+
+    <link rel="stylesheet" href="cookieconsent.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body onload="cookieConsent();">
+    <div class="cookieconsent-background" id="cookieconsent-background">
+      <div class="cookieconsent" id="cookieconsent">
+        <h1>Bevor Sie fortfahren können...</h1>
+        <div class="general active" id="cookieconsent-general">
+          <div class="collapsible">
+            <p class="collapsible-spoiler" id="collapsible-1-spoiler" onclick="document.getElementById('collapsible-1-content').classList.toggle('active');">Was sind Cookies?</p>
+            <div class="collapsible-content" id="collapsible-1-content">
+              <p>
+                Cookies sind kurze Text-Dateien, welche von den von Ihnen besuchte Webseiten an Ihren Browser gesendet werden und auf Ihrem Gerät gespeichert werden. Sie können unterschiedliche Informationen über Ihren Besuch auf einer Webseite enthalten, zum Beispiel von Ihnen getroffene Einstellungen oder den Login-Status. <br>
+                Ferner können Cookies, sofern Sie dem zustimmen, auch für Analysen und Reichweitenmessungen genutzt werden, sowie zum Speichern von Interessen oder Präferenzen. Weitere Informationen können Sie der <a href="datenschutzerklaerung.html">Datenschutzerklärung</a> entnehmen.
+              </p>
+            </div>
+          </div>
+          <p>
+            <b>Diese Webseite nutzt Cookies für folgende Zwecke:</b> <br>
+            • Bereitstellung und Funktionalität des Onlineangebotes <br>
+            <br>
+            <b>Bei Zustimmung können Cookies ebenfalls für Folgendes verwendet werden:</b> <br>
+            • Verbesserung der Qualität des Onlineangebotes <br>
+            • Anzeigen personalisierter Inhalte <br>
+            • Analysen und Messungen <br>
+          </p>
+          <hr>
+          <div style="display: flex; justify-content: flex-end;">
+            <button type="button" name="accept" onclick="acceptAll();">Zustimmen</button>&nbsp;
+            <button type="button" name="settings" onclick="openSettings();">Einstellungen</button>
+          </div>
+          <br>
+        </div>
+        <div class="settings" id="cookieconsent-settings">
+          <p>
+            Bitte wählen Sie in der folgenden Liste aus, welche Cookies Sie akzeptieren möchten.
+          </p>
+          <div class="setting" id="cookieconsent-setting-essential">
+            <p>
+              Notwendige Cookies <br>
+              <span class="information" onclick="alert('Notwendige Cookies: Hierbei handelt es sich um Cookies, die Daten speichern, die für die Funktionalität der Webseite erforderlich sind. Daher können diese Cookies nicht deaktiviert werden. Es werden beispielsweise von Ihnen vorgenommene Einstellungen auf der Webseite gespeichert.');">Informationen</span>
+            </p>
+            <label class="switch">
+              <input type="checkbox" id="cookieconsent-setting-essential-checkbox" checked disabled>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="setting" id="cookieconsent-setting-advancements">
+            <p>
+              Verbesserung der Qualität des Onlineangebotes <br>
+              <span class="information" onclick="alert('Verbesserung der Qualität des Onlineangebotes: Hierbei handelt es sich um Cookies, die für einen einfacheren Umgang mit der Webseite verantwortlich sind. Es werden beispielsweise Daten zum Login-Status gespeichert, um wiederholtes Anmelden zu vermeiden.');">Informationen</span>
+            </p>
+            <label class="switch">
+              <input type="checkbox" id="cookieconsent-setting-advancements-checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="setting" id="cookieconsent-setting-personalized-content">
+            <p>
+              Anzeigen personalisierter Inhalte <br>
+              <span class="information" onclick="alert('Anzeigen personalisierter Inhalte: Hierbei handelt es sich um Cookies, die für das Anzeigen personalisierter Inhalte auf der Webseite verantwortlich sind. Es werden beispielsweise Daten über Interessen auf Basis von aufgerufenen Seiten gespeichert, Vorschläge werden speziell nach diesen ermittelten Interessen gefiltert.');">Informationen</span>
+            </p>
+            <label class="switch">
+              <input type="checkbox" id="cookieconsent-setting-personalized-content-checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="setting" id="cookieconsent-setting-analyzes">
+            <p>
+              Analysen und Messungen <br>
+              <span class="information" onclick="alert('Analysen und Messungen: Hierbei werden Cookies gespeichert, die der Analyse und Reichweitenmessung dienen.');">Informationen</span>
+            </p>
+            <label class="switch">
+              <input type="checkbox" id="cookieconsent-setting-analyzes-checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <p>
+            Sie können Ihre Einstellungen in den <a href="privacy">Privatsphäreeinstellungen</a> auch zu einem späteren Zeitpunkt bearbeiten.
+          </p>
+          <hr>
+          <div style="display: flex; justify-content: flex-end;">
+            <button type="button" name="confirm" onclick="confirmCookieSettings();">Einstellungen speichern</button>&nbsp;
+            <button type="button" name="accept" onclick="acceptAll();">Allen zustimmen</button>
+          </div>
+        </div>
+        <p style="text-align: center;"><a href="datenschutzerklaerung">Datenschutzerklärung</a>&nbsp;•&nbsp;<a href="impressum">Impressum</a></p>
+      </div>
+    </div>
+
+    <script src="cookieconsent.js"></script>
+  </body>
+</html>
