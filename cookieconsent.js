@@ -11,6 +11,10 @@ function cookieConsent() {
   }
 }
 
+function forceCookieConsent() {
+  toggleConsent();
+}
+
 function updateSettings(essential, advancements, personalizedContent, analyzes) {
   var settings = {'essential': essential, 'advancements': advancements, 'personalizedContent': personalizedContent, 'analyzes': analyzes};
 
