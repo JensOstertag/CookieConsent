@@ -1,12 +1,11 @@
 :root {
   --clr-alpha-background: rgba(0, 0, 0, 0.4);
   --clr-background: #ffffff;
-  --clr-font-color: #000000;
-  --clr-link-color: #45a4fc;
-  --clr-collapsible: #45a4fc;
-  --clr-collapsible-font-color: #ffffff;
-  --clr-button: #45a4fc;
-  --clr-button-font-color: #ffffff;
+  --clr-primary: #2f7cff;
+  --clr-primary-hover: #275fda;
+  --clr-secondary: #6d757d;
+  --clr-font-color-dark: #000000;
+  --clr-font-color-bright: #ffffff;
   --clr-switch-on: #00c846;
   --clr-switch-off: #cccccc;
   --clr-switch-dot: #ffffff;
@@ -16,6 +15,14 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.cookieconsent p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .cookieconsent-background {
@@ -36,7 +43,7 @@ body {
 }
 
 .cookieconsent {
-  width: 50%;
+  width: 450px;
   padding: 2.5%;
   border-radius: 3px;
   font-size: 16px;
@@ -56,6 +63,8 @@ body {
 
 .cookieconsent h1 {
   font-size: 28px;
+  text-align: left;
+  font-weight: bolder;
 }
 
 .cookieconsent p {
@@ -68,42 +77,74 @@ body {
 }
 
 .cookieconsent .collapsible {
-  border: 1px solid var(--clr-collapsible);
+  border: 1px solid var(--clr-primary);
   border-radius: 3px;
+  margin-bottom: 1rem;
 }
 
 .cookieconsent .collapsible-spoiler {
-  padding: 2% 1%;
+  padding: 1%;
   margin: 0;
-  color: var(--clr-collapsible-font-color);
-  background-color: var(--clr-collapsible);
+  color: var(--clr-font-color-bright);
+  background-color: var(--clr-primary);
+  border-radius: 3px;
+  text-align: center;
   cursor: pointer;
-  font-weight: bolder;
+  transition: all 100ms linear;
+}
+
+.cookieconsent .collapsible-spoiler:hover {
+  background-color: var(--clr-primary-hover);
 }
 
 .cookieconsent .collapsible-content a {
   text-decoration: bold;
-  color: var(--clr-link-color);
+  color: var(--clr-primary);
+}
+
+.cookieconsent .collapsible-content a:hover {
+  color: var(--clr-primary-hover);
 }
 
 .cookieconsent .collapsible-content {
-  padding: 2% 1%;
-  display: none;
+  padding: 0 2%;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .cookieconsent .collapsible-content.active {
-  font-size: 14px;
-  display: block;
+  padding: 0 2%;
+  font-size: 1rem;
+  max-height: 100%;
 }
 
 .cookieconsent button {
+  margin: 1% 0;
   padding: 2.5%;
-  background-color: var(--clr-button);
-  color: var(--clr-button-font-color);
-  border: none;
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: bolder;
+  font-size: 1rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-font-color-bright);
+  border: 1px solid var(--clr-primary);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 250ms linear;
+}
+
+.cookieconsent button:hover {
+  background-color: var(--clr-primary-hover);
+  border: 1px solid var(--clr-primary-hover);
+}
+
+.cookieconsent button.secondary {
+  background-color: var(--clr-background);
+  color: var(--clr-secondary);
+  border: 1px solid var(--clr-secondary);
+}
+
+.cookieconsent button.secondary:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-background);
+  border: 1px solid var(--clr-secondary);
 }
 
 .cookieconsent .general {
@@ -129,7 +170,7 @@ body {
 }
 
 .cookieconsent .settings a {
-  color: var(--clr-link-color);
+  color: var(--clr-primary);
 }
 
 .cookieconsent .settings .setting {
@@ -145,7 +186,7 @@ body {
 
 .cookieconsent .settings .setting p .information {
   font-size: 12px;
-  color: var(--clr-link-color);
+  color: var(--clr-primary);
   cursor: pointer;
 }
 
