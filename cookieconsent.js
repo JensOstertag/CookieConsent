@@ -34,6 +34,18 @@ function openSettings() {
   cookieSettings.classList.toggle("active");
 }
 
+function toggleInformation(id) {
+  if(id == 1) {
+    document.getElementById("cookieconsent-setting-information-general").classList.toggle("active");
+  } else if(id == 2) {
+    document.getElementById("cookieconsent-setting-information-advancements").classList.toggle("active");
+  } else if(id == 3) {
+    document.getElementById("cookieconsent-setting-information-personalized-content").classList.toggle("active");
+  } else if(id == 4) {
+    document.getElementById("cookieconsent-setting-information-analyzes").classList.toggle("active");
+  }
+}
+
 function confirmCookieSettings() {
   var essential = document.getElementById("cookieconsent-setting-essential-checkbox").checked;
   var advancements = document.getElementById("cookieconsent-setting-advancements-checkbox").checked;
