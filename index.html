@@ -49,42 +49,62 @@
           <div class="setting" id="cookieconsent-setting-essential">
             <p>
               Notwendige Cookies <br>
-              <span class="information" onclick="alert('Notwendige Cookies: Hierbei handelt es sich um Cookies, die Daten speichern, die für die Funktionalität der Webseite erforderlich sind. Daher können diese Cookies nicht deaktiviert werden. Es werden beispielsweise von Ihnen vorgenommene Einstellungen auf der Webseite gespeichert.');">Informationen</span>
+              <span class="information" onclick="toggleInformation(1);">Informationen</span>
             </p>
             <label class="switch">
               <input type="checkbox" id="cookieconsent-setting-essential-checkbox" checked disabled>
               <span class="slider"></span>
             </label>
           </div>
+          <div class="setting-information" id="cookieconsent-setting-information-general">
+            <p>
+              Notwendige Cookies: Hierbei handelt es sich um Cookies, die Daten speichern, die für die Funktionalität der Webseite erforderlich sind. Daher können diese Cookies nicht deaktiviert werden. Es werden beispielsweise von Ihnen vorgenommene Einstellungen auf der Webseite gespeichert.
+            </p>
+          </div>
           <div class="setting" id="cookieconsent-setting-advancements">
             <p>
               Verbesserung der Qualität des Onlineangebotes <br>
-              <span class="information" onclick="alert('Verbesserung der Qualität des Onlineangebotes: Hierbei handelt es sich um Cookies, die für einen einfacheren Umgang mit der Webseite verantwortlich sind. Es werden beispielsweise Daten zum Login-Status gespeichert, um wiederholtes Anmelden zu vermeiden.');">Informationen</span>
+              <span class="information" onclick="toggleInformation(2);">Informationen</span>
             </p>
             <label class="switch">
               <input type="checkbox" id="cookieconsent-setting-advancements-checkbox">
               <span class="slider"></span>
             </label>
           </div>
+          <div class="setting-information" id="cookieconsent-setting-information-advancements">
+            <p>
+              Verbesserung der Qualität des Onlineangebotes: Hierbei handelt es sich um Cookies, die für einen einfacheren Umgang mit der Webseite verantwortlich sind. Es werden beispielsweise Daten zum Login-Status gespeichert, um wiederholtes Anmelden zu vermeiden.
+            </p>
+          </div>
           <div class="setting" id="cookieconsent-setting-personalized-content">
             <p>
               Anzeigen personalisierter Inhalte <br>
-              <span class="information" onclick="alert('Anzeigen personalisierter Inhalte: Hierbei handelt es sich um Cookies, die für das Anzeigen personalisierter Inhalte auf der Webseite verantwortlich sind. Es werden beispielsweise Daten über Interessen auf Basis von aufgerufenen Seiten gespeichert, Vorschläge werden speziell nach diesen ermittelten Interessen gefiltert.');">Informationen</span>
+              <span class="information" onclick="toggleInformation(3);">Informationen</span>
             </p>
             <label class="switch">
               <input type="checkbox" id="cookieconsent-setting-personalized-content-checkbox">
               <span class="slider"></span>
             </label>
           </div>
+          <div class="setting-information" id="cookieconsent-setting-information-personalized-content">
+            <p>
+              Anzeigen personalisierter Inhalte: Hierbei handelt es sich um Cookies, die für das Anzeigen personalisierter Inhalte auf der Webseite verantwortlich sind. Es werden beispielsweise Daten über Interessen auf Basis von aufgerufenen Seiten gespeichert, Vorschläge werden speziell nach diesen ermittelten Interessen gefiltert.
+            </p>
+          </div>
           <div class="setting" id="cookieconsent-setting-analyzes">
             <p>
               Analysen und Messungen <br>
-              <span class="information" onclick="alert('Analysen und Messungen: Hierbei werden Cookies gespeichert, die der Analyse und Reichweitenmessung dienen.');">Informationen</span>
+              <span class="information" onclick="toggleInformation(4);">Informationen</span>
             </p>
             <label class="switch">
               <input type="checkbox" id="cookieconsent-setting-analyzes-checkbox">
               <span class="slider"></span>
             </label>
+          </div>
+          <div class="setting-information" id="cookieconsent-setting-information-analyzes">
+            <p>
+              Analysen und Messungen: Hierbei werden Cookies gespeichert, die der Analyse und Reichweitenmessung dienen.
+            </p>
           </div>
           <p>
             Sie können Ihre Einstellungen in den <a href="privacy">Privatsphäreeinstellungen</a> auch zu einem späteren Zeitpunkt bearbeiten.
