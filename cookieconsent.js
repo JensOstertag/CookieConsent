@@ -27,7 +27,7 @@ function acceptAll() {
 }
 
 function openSettings() {
-  var cookieGeneral = document.getElementById("cookieconsent-general");
+  var cookieGeneral = document.getElementById("cookieconsent-main");
   cookieGeneral.classList.toggle("active");
 
   var cookieSettings = document.getElementById("cookieconsent-settings");

@@ -15,8 +15,11 @@
   <body onload="cookieConsent();">
     <div class="cookieconsent-background" id="cookieconsent-background">
       <div class="cookieconsent" id="cookieconsent">
-        <h1>Bevor Sie fortfahren können...</h1>
-        <div class="general active" id="cookieconsent-general">
+        <div class="cookieconsent-header">
+          <h1>Bevor Sie fortfahren können...</h1>
+        </div>
+
+        <div class="cookieconsent-main active" id="cookieconsent-main">
           <div class="collapsible">
             <p class="collapsible-spoiler" id="collapsible-1-spoiler" onclick="document.getElementById('collapsible-1-content').classList.toggle('active');">Was sind Cookies?</p>
             <div class="collapsible-content" id="collapsible-1-content">
@@ -35,14 +38,12 @@
             • Anzeigen personalisierter Inhalte <br>
             • Analysen und Messungen <br>
           </p>
-          <hr>
           <div style="display: flex; justify-content: flex-end;">
             <button type="button" name="accept" onclick="acceptAll();">Zustimmen</button>&nbsp;
             <button type="button" class="secondary" name="settings" onclick="openSettings();">Einstellungen</button>
           </div>
-          <br>
         </div>
-        <div class="settings" id="cookieconsent-settings">
+        <div class="cookieconsent-main" id="cookieconsent-settings">
           <p>
             Bitte wählen Sie in der folgenden Liste aus, welche Cookies Sie akzeptieren möchten.
           </p>
@@ -109,13 +110,15 @@
           <p>
             Sie können Ihre Einstellungen in den <a href="privacy">Privatsphäreeinstellungen</a> auch zu einem späteren Zeitpunkt bearbeiten.
           </p>
-          <hr>
           <div style="display: flex; justify-content: flex-end;">
             <button type="button" name="confirm" onclick="confirmCookieSettings();">Einstellungen speichern</button>&nbsp;
             <button type="button" class="secondary" name="accept" onclick="acceptAll();">Allen zustimmen</button>
           </div>
         </div>
-        <p style="text-align: center;"><a href="datenschutzerklaerung">Datenschutzerklärung</a>&nbsp;•&nbsp;<a href="impressum">Impressum</a></p>
+
+        <div class="cookieconsent-footer">
+          <p style="text-align: center;"><a href="datenschutzerklaerung">Datenschutzerklärung</a>&nbsp;•&nbsp;<a href="impressum">Impressum</a></p>
+        </div>
       </div>
     </div>
 
